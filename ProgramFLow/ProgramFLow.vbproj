@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{6A9B6C3E-914F-4F10-B6CA-3316F5E0DE56}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <StartupObject>ProgramFLow.Module1</StartupObject>
+    <StartupObject>ProgramFLow.ProgramFlow</StartupObject>
     <RootNamespace>ProgramFLow</RootNamespace>
     <AssemblyName>ProgramFLow</AssemblyName>
     <FileAlignment>512</FileAlignment>
@@ -69,7 +69,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Module1.vb" />
+    <Compile Include="ProgramFlow.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
