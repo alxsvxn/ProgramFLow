@@ -1,10 +1,12 @@
-﻿'Alexis Villagran
+﻿Option Strict On
+Option Explicit On
+Option Compare Text
+'Alexis Villagran
 'RCET
 '1/27/2013
 'Program Flow
 
-Option Strict On
-Option Explicit On
+Imports System.Linq.Expressions
 
 Module ProgramFlow
 
@@ -47,25 +49,33 @@ Module ProgramFlow
         '    Console.WriteLine($"Not sure what happened")
         'End If
 
-        Console.WriteLine("Please enter your age:")
-        userInput = Console.ReadLine()
-        num1 = CInt(userInput)
+        Do
+            Console.WriteLine("Please enter your age:")
+            userInput = Console.ReadLine()
 
-        Select Case num1
-            Case 0 To 3
+            Try 'Try will run this code first and read the userinput to see if it's a valid integer or "Q" 
+                num1 = CInt(userInput)
+                Select Case num1
+                    Case 0 To 3
+                        Console.WriteLine("TOO TINY!")
+                    Case 4 To 10
+                        Console.WriteLine("You're still to young to enter.")
+                    Case 11 To 64
+                        Console.WriteLine("Enjoy the ride!")
+                    Case 65 To 99
+                        Console.WriteLine("Please sign this liability release form")
+                    Case > 100
+                        Console.WriteLine("gramps")
+                    Case Else
+                        Console.WriteLine("Invalid")
+                End Select
+            Catch ex As Exception 'If user entered non-integer, it reiterate input
+                Console.WriteLine($"You entered {userInput}.")
+            End Try
 
-            Case 4 To 10
+        Loop Until userInput = "Q"
 
-            Case 11 To 64
-
-            Case 65 To 99
-
-            Case > 100
-
-            Case Else
-
-
-        End Select
+        Console.WriteLine("Have a nice day.")
     End Sub
 
 End Module
