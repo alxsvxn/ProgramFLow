@@ -79,16 +79,52 @@ Module ProgramFlow
         '    Console.WriteLine("Have a nice day.")
 
 
-        Do
-            Console.WriteLine("Type sommething & Press Enter")
-            userInput = Console.ReadLine()
-            Console.WriteLine($"In the Do Until Loop.")
-        Loop Until userInput = "Q"
+        'Do
+        '    Console.WriteLine("Type sommething & Press Enter")
+        '    userInput = Console.ReadLine()
+        '    Console.WriteLine($"In the Do Until Loop.")
+        'Loop Until userInput = "Q"
 
-        Do While userInput = "Q"
-            Console.WriteLine("Type sommething & Press Enter")
-            userInput = Console.ReadLine()
-            Console.WriteLine($"In the Do While Loop.")
-        Loop
+        'Do While userInput = "Q"
+        '    Console.WriteLine("Type sommething & Press Enter")
+        '    userInput = Console.ReadLine()
+        '    Console.WriteLine($"In the Do While Loop.")
+        'Loop
+
+        'For i As Integer = 1 To 10 Step 1
+        '    Console.WriteLine(i)
+        'Next
+
+        'Console.WriteLine(StrDup(80, "*"))
+
+        'For i = 1 To 10 Step 0.5
+        '    Console.WriteLine(i)
+        'Next
+
+        'Console.WriteLine(StrDup(80, "*"))
+
+        'For i = 1 To 10
+        '    Console.WriteLine(i)
+        'Next
+
+        'Nested for loops
+
+        Dim result As String
+        For i = 1 To 10
+
+
+            For j = 1 To 10
+
+                result = CStr(i + j)
+
+                result = result.PadLeft(4)
+
+                Console.Write(result)
+
+            Next
+
+            Console.WriteLine()
+
+        Next
     End Sub
 End Module
